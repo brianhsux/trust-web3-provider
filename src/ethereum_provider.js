@@ -350,11 +350,11 @@ class TrustWeb3Provider extends BaseProvider {
    * @private Internal js -> native message handler
    */
   postMessage(handler, id, data) {
-    if (this.ready || handler === "requestAccounts" || handler === "wallet_switchEthereumChain") {
+    if (this.ready || handler === "requestAccounts" || handler === "switchEthereumChain") {
       super.postMessage(handler, id, data);
     } else {
       // don't forget to verify in the app
-      this.sendError(id, new ProviderRpcError(4100, "provider is not ready"));
+      this.sendError(id, new ProviderRpcError(4100, "provider is not ready......"));
     }
   }
 

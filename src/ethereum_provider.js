@@ -350,7 +350,7 @@ class TrustWeb3Provider extends BaseProvider {
    * @private Internal js -> native message handler
    */
   postMessage(handler, id, data) {
-    if (this.ready || handler === "requestAccounts" || handler === "switchEthereumChain") {
+    if (this.ready || handler === "requestAccounts") {
       super.postMessage(handler, id, data);
     } else {
       // don't forget to verify in the app
